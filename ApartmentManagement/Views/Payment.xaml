@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ApartmentManagement.Views"
         mc:Ignorable="d"
-        Title="Payment" Height="500" Width="1000">
+        Title="Payment" Height="700" Width="1000">
     <Border Background="#FFFFFF" BorderBrush = "#ebedf3" Padding="20">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -18,18 +18,18 @@
                 <StackPanel Background="#F1F1F1" HorizontalAlignment="Center" Width="160">
                     <Image Source="/Assets/img2.jpg" Width="150" Height="76" HorizontalAlignment="Center" />
                     <Button Content="Stat board" HorizontalAlignment="Center" Width="100" Margin="5" />
-                    <Button Content="Apartment" HorizontalAlignment="Center" Width="100" Background="#0078D4" Margin="5" />
+                    <Button Content="Apartment" HorizontalAlignment="Center" Width="100" Margin="5" />
                     <Button Content="Resident" HorizontalAlignment="Center" Width="100" Margin="5" />
                     <Button Content="Service" HorizontalAlignment="Center" Width="100" Margin="5" />
                     <Button Content="Announcement" HorizontalAlignment="Center" Width="100" Margin="5" />
-                    <Button Content="Payment" HorizontalAlignment="Center" Width="100" Margin="5" />
+                    <Button Content="Payment" HorizontalAlignment="Center" Width="100" Margin="5" Background="#0078D4" />
                     <Button Content="Report" HorizontalAlignment="Center" Width="100" Margin="5" />
                     <Button Content="Setting" HorizontalAlignment="Center" Width="100" Margin="5" />
                     <Button Content="Log Out" HorizontalAlignment="Center" Width="100" Margin="5" />
                 </StackPanel>
             </Grid>
             <!-- Main Content Area -->
-            <Grid Grid.Column="1" VerticalAlignment="Center" Height="434" >
+            <Grid Grid.Column="1" Margin="10">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.5*" />
                     <RowDefinition Height="3*"/>
@@ -43,9 +43,14 @@
                         <Button Content="Search" Width="80" Margin="1"/>
                     </StackPanel>
                 </Grid>
+                <Grid Grid.Row="1">
+                    <Border Padding="25, 10" BorderBrush="Black" BorderThickness="3" CornerRadius="40">
 
+                    </Border>
+                </Grid>
                 <Grid Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="800">
                     <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
@@ -69,6 +74,12 @@
                                 <ComboBoxItem Content="Amount"/>
                                 <ComboBoxItem Content="Date"/>
                             </ComboBox>
+                        </StackPanel>
+                    </Grid>
+
+                    <Grid Grid.Column="2">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5" Height="40">
+                            <Button Content="Confirm" Width="100" Margin="20, 0, 0, 0"/>
                         </StackPanel>
                     </Grid>
                 </Grid>

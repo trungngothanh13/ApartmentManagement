@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ApartmentManagement.Views"
         mc:Ignorable="d"
-        Title="Apartment" Height="500" Width="1000">
+        Title="Apartment" Height="700" Width="1000">
     <Border Background="#FFFFFF" BorderBrush = "#ebedf3" Padding="20">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -29,13 +29,17 @@
                 </StackPanel>
             </Grid>
             <!-- Main Content Area -->
-            <Grid Grid.Column="1" VerticalAlignment="Center" Height="434" >
+            <Grid Grid.Column="1" Margin="10">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.5*" />
                     <RowDefinition Height="3*"/>
                     <RowDefinition Height="0.5*" />
                 </Grid.RowDefinitions>
-                
+                <Grid Grid.Row="1">
+                    <Border Padding="25, 10" BorderBrush="Black" BorderThickness="3" CornerRadius="40">
+
+                    </Border>
+                </Grid>
                 <Grid Grid.Row="0">
                     <!-- Search box here -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" Height="40">
@@ -48,8 +52,9 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    
+
                     <Grid Grid.Column="0">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5" Height="40">
                             <Label TextElement.FontSize="16">Filter:</Label>
@@ -59,7 +64,7 @@
                             </ComboBox>
                         </StackPanel>
                     </Grid>
-                    
+
                     <Grid Grid.Column="1">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5" Height="40">
                             <Label TextElement.FontSize="16">Sort by</Label>
@@ -69,6 +74,12 @@
                                 <ComboBoxItem Content="Date"/>
                                 <ComboBoxItem Content="Owner"/>
                             </ComboBox>
+                        </StackPanel>
+                    </Grid>
+
+                    <Grid Grid.Column="2">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5" Height="40">
+                            <Button Content="Confirm" Width="100" Margin="20, 0, 0, 0"/>
                         </StackPanel>
                     </Grid>
                 </Grid>
